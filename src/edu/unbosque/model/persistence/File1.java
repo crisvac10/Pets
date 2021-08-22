@@ -1,22 +1,21 @@
 package edu.unbosque.model.persistence;
 
 import edu.unbosque.model.Pets;
-import edu.unbosque.model.PetsDTO;
 
 import java.io.*;
 import java.util.ArrayList;
 
-public class Archivo {
+public class File1 {
 
 private ObjectOutputStream exit;
 private ObjectInputStream entry;
 
-public Archivo(){
+public File1(){
 
 }
 public ArrayList<Pets> get(){
     try {
-        entry = new ObjectInputStream(new FileInputStream("/c/Users/Cristian Vaca/Pets/src/Pets.dat"));
+        entry = new ObjectInputStream(new FileInputStream("/c/Users/Cristian Vaca/Pets/Data/Pets.dat"));
         ArrayList<Pets> arrayAux=(ArrayList<Pets>) entry.readObject();
         entry.close();
         return arrayAux;

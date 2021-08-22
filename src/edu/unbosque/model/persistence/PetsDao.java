@@ -6,9 +6,9 @@ import java.util.ArrayList;
 
 public class PetsDao {
     private ArrayList<Pets> pets = new ArrayList<Pets>();
-    private Archivo arch;
+    private File1 arch;
     public PetsDao(){
-        arch = new Archivo();
+        arch = new File1();
     }
     public void addPetPersistence(Pets p){
         if(arch.get()!= null){
@@ -18,11 +18,11 @@ public class PetsDao {
         arch.write(pets);
     }
 
-    public Archivo getArch() {
+    public File1 getArch() {
         return arch;
     }
 
-    public void setArch(Archivo arch) {
+    public void setArch(File1 arch) {
         this.arch = arch;
     }
 
