@@ -1,43 +1,49 @@
 package edu.unbosque.model.persistence;
 
+import edu.unbosque.model.Pets;
 import edu.unbosque.model.PetsList;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class FileCsv {
-    private String ruta = "./C/Users/Cristian Vaca/Pets/src/pets-citizens.csv";
+    private String ruta = "C:/Users/Personal/Pets/Data/pets-citizens.csv";
+    private String Separator = ";";
 
     public FileCsv() {
 
     }
 
     public ArrayList<PetsList> readFile() {
-        String line = "";
-        ArrayList<PetsList> list = new ArrayList<PetsList>() ;
+        ArrayList<PetsList> list = new ArrayList<PetsList>();
         File f = new File(ruta);
         try {
             FileReader fr = new FileReader(f);
             BufferedReader br = new BufferedReader(fr);
-            line = br.readLine();
-            String[] temp;
+            String line = br.readLine();
             while (line != null) {
-                temp = line.split(";");
+                String[] fields = line.split(Separator);
+                System.out.println(Arrays.toString(fields));
 
-                list.add(new PetsList(temp[0], temp[1], temp[2], temp[3], temp[4],temp[5]));
+                list.add(new PetsList(fields[0], fields[1], fields[2], fields[3], fields[4], fields[5]));
+
                 line = br.readLine();
             }
-                fr.close();
-                return list;
+
+            fr.close();
+            return list;
+
+            }catch(FileNotFoundException e){
+                System.out.println("No ha encontrado el archivo");
 
             }catch(IOException e){
-                e.printStackTrace();
+                    e.printStackTrace();
                 System.out.println("No se ha podido leer el archivo");
             }
         return null;
         }
+
+
     }
 
