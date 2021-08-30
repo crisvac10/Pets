@@ -4,8 +4,7 @@ public class PetsList {
     public String species, sex , size, neighborhood,microchip, potentDangerous;
 
 
-    public PetsList ( String species, String sex, String size, String neighborhood, String microchip, String potentDangerous){
-        super();
+    public PetsList(String microchip, String species, String sex, String size, String potentDangerous, String neighborhood){
 
         this.microchip=microchip;
         this.neighborhood=neighborhood;
@@ -39,8 +38,6 @@ public class PetsList {
     public void setNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
     }
-
-
 
     public String getSex() {
         return sex;
