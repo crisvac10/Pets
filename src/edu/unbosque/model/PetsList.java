@@ -1,10 +1,11 @@
 package edu.unbosque.model;
 
 public class PetsList {
-    public String species, sex , size, neighborhood,microchip, potentDangerous;
+    public String id, species, sex , size, neighborhood;
+    public long microchip;
+    public boolean potentDangerous;
 
-
-    public PetsList(String microchip, String species, String sex, String size, String potentDangerous, String neighborhood){
+    public PetsList(String id, long microchip, String species, String sex, String size, boolean potentDangerous, String neighborhood){
 
         this.microchip=microchip;
         this.neighborhood=neighborhood;
@@ -15,19 +16,27 @@ public class PetsList {
 
     }
 
-    public String getPotentDangerous() {
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public boolean isPotentDangerous() {
         return potentDangerous;
     }
 
-    public void setPotentDangerous(String potentDangerous) {
+    public void setPotentDangerous(boolean potentDangerous) {
         this.potentDangerous = potentDangerous;
     }
 
-    public String getMicrochip() {
+    public long getMicrochip() {
         return microchip;
     }
 
-    public void setMicrochip(String microchip) {
+    public void setMicrochip(long microchip) {
         this.microchip = microchip;
     }
 
