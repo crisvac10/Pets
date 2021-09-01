@@ -105,8 +105,20 @@ a = 2;
 
         return "El proceso de asignación de ids ha finalizado";
     }
+
+    public String countNeighborhood(String neighborhood){
+
+    int count = 0;
+    String resul = "";
+        for (int i = 0; i < list.size(); i++) {
+            if(list.get(i).getNeighborhood().equals(neighborhood.toUpperCase())){
+                count++;
+            } resul = "El numero de animales en "+ neighborhood.toUpperCase()+"son:"+count;
+        }return resul;
+
+    }
     public PetsList findMicrochip(long microchip) {
-        PetsList encontrado = null;
+        PetsList find = null;
 
         for (int i = 0; i < list.size(); i++) {
 
@@ -117,15 +129,15 @@ a = 2;
             }
         }
 
-        return encontrado;
+        return find;
     }
     public String countSpecies (String species) {
-        int contador = 0;
+        int count = 0;
         String result = "";
 
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).getSpecies().equals(species.toUpperCase())) {
-                contador++;
+                count++;
             }
 
             result = "El número de animales de la especie"+ " " + species.toUpperCase() + " "+ "es"+ " " + contador;
@@ -134,7 +146,7 @@ a = 2;
 
         return result;
     }
-    public PetsList findByMultipleFields (String sex, String species,String size, String potentDangerous) {
+    public PetsList findMultipleFields (String sex, String species,String size, String potentDangerous) {
 
 
         PetsList pd = new ArrayList<PetsList>();
