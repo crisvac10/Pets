@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0a212f93-6dcb-4ba1-bd8d-136510405a23" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/unbosque/main/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/unbosque/main/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/unbosque/model/Pets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/unbosque/model/Pets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/unbosque/model/PetsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/unbosque/model/PetsList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/unbosque/model/persistence/ManagerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/unbosque/model/persistence/ManagerDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
