@@ -1,16 +1,16 @@
 package edu.unbosque.model;
 
-import edu.unbosque.model.persistence.FileCsv;
+import edu.unbosque.model.persistence.ManagerDAO;
 
 import java.util.ArrayList;
 
 public class Pets {
 
     ArrayList<PetsList> list;
-    FileCsv file;
+    ManagerDAO file;
 
         public Pets(){
-            file = new FileCsv();
+            file = new ManagerDAO();
             list = file.readFile();
     }
 

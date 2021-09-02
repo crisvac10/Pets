@@ -1,18 +1,18 @@
 package edu.unbosque.main;
 
 import edu.unbosque.model.persistence.File1;
-import edu.unbosque.model.persistence.FileCsv;
+import edu.unbosque.model.persistence.ManagerDAO;
 import edu.unbosque.view.ViewConsole;
 
 public class Controller {
 
     private ViewConsole view;
-    private FileCsv csv;
+    private ManagerDAO csv;
     private File1 file;
 
     public Controller(){
         view = new ViewConsole();
-        csv = new FileCsv();
+        csv = new ManagerDAO();
         file = new File1();
         StartApp();
 

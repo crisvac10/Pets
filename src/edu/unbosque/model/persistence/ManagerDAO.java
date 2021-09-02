@@ -7,19 +7,28 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class FileCsv {
-    private String ruta = "C:/Users/Personal/Pets/Data/pets-citizens.csv";
-    private String Separator = ";";
-    private ArrayList<PetsList> list;
-    ArrayList<PetsList>dangerous;
-    private int a;
-    private String id = "No-ID";
-    public FileCsv() {
+/**
+ * Clase ManagerDAO que contiene la lectura del archivo csv, y los diferentes metodosde la aplicacion
+ */
+public class ManagerDAO {
+    private String ruta = "C:/Users/Personal/Pets/Data/pets-citizens.csv";// Atributo de tipo String que contiene la ruta del archivo csv
+    private String Separator = ";";//Atributo que contiene el separador del archivo csv
+    private ArrayList<PetsList> list;//Atributo de tipo ArrayList que contiene el arreglo de la clase PetsList
+    ArrayList<PetsList>dangerous; //Atributo de tipo ArrayList que contiene otro arreglo de la clase PetsList
+
+    /**
+     * Constructor de la clase ManagerDAO que inicializa los arreglos
+     */
+    public ManagerDAO() {
 list = new ArrayList<PetsList>();
 dangerous = new ArrayList<PetsList>();
-a = 2;
+
     }
 
+    /**
+     * Metodo que raliza la lectura del archivo csv
+     * @return
+     */
     public ArrayList<PetsList> readFile() {
 
         File f = new File(ruta);
@@ -48,6 +57,11 @@ a = 2;
             }
         return null;
         }
+
+    /**
+     * Metodo que realiza la asignacion de los id de los animales
+     * @return
+     */
     public String assignID () {
         String mc = "";
         String species = "";
@@ -106,6 +120,11 @@ a = 2;
         return "El proceso de asignación de ids ha finalizado";
     }
 
+    /**
+     * Metodo que cuenta por localidad la cantidad de ciudadanos de 4 patas
+     * @param neighborhood
+     * @return
+     */
     public String countNeighborhood(String neighborhood){
 
     int count = 0;
@@ -117,6 +136,12 @@ a = 2;
         }return resul;
 
     }
+
+    /**
+     * metodo que encuentra al ciudadano de 4 patas por su respectivo microchip
+     * @param microchip
+     * @return
+     */
     public PetsList findMicrochip(long microchip) {
         PetsList find = null;
 
@@ -131,6 +156,12 @@ a = 2;
 
         return find;
     }
+
+    /**
+     * Metodo que permite contar la cantidad de ciudadanos de 4 patas por especie
+     * @param species
+     * @return
+     */
     public String countSpecies (String species) {
         int count = 0;
         String result = "";
@@ -140,12 +171,21 @@ a = 2;
                 count++;
             }
 
-            result = "El número de animales de la especie"+ " " + species.toUpperCase() + " "+ "es"+ " " + contador;
+            result = "El número de animales de la especie"+ " " + species.toUpperCase() + " "+ "es"+ " " + count;
         }
 
 
         return result;
     }
+
+    /**
+     * Metodo que encuentra los ciudadanos de 4 patas por diferentes filtros
+     * @param sex
+     * @param species
+     * @param size
+     * @param potentDangerous
+     * @return
+     */
     public PetsList findMultipleFields (String sex, String species,String size, String potentDangerous) {
 
 
