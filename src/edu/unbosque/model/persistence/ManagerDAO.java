@@ -186,29 +186,29 @@ dangerous = new ArrayList<PetsList>();
      * @param potentDangerous
      * @return
      */
-    public PetsList findMultipleFields (String sex, String species,String size, String potentDangerous) {
+    //public PetsList findMultipleFields (String sex, String species,String size, String potentDangerous) {
 
 
-        PetsList pd = new ArrayList<PetsList>();
-        String pc = "";
-        boolean dangerous = false;
+      //  PetsList pd = new ArrayList<PetsList>();
+       // String pc = "";
+       // boolean dangerous = false;
 
-        if (potentDangerous.equals("si".toUpperCase())) {
-            dangerous = true;
-        }else if (potentDangerous.equals("no".toUpperCase())) {
-            dangerous = false;
-        }
+        //if (potentDangerous.equals("si".toUpperCase())) {
+          //  dangerous = true;
+        //}else if (potentDangerous.equals("no".toUpperCase())) {
+          //  dangerous = false;
+        //}
 
-        for (int i = 0; i < list.size(); i++) {
+        //for (int i = 0; i < list.size(); i++) {
 
 
-            if (list.get(i).getSex().equals(sex.toUpperCase()) && list.get(i).getSpecies().equals(species.toUpperCase()) && list.get(i).getSize().equals(size.toUpperCase()) && list.get(i).isPotentDangerous() == dangerous){
+          //  if (list.get(i).getSex().equals(sex.toUpperCase()) && list.get(i).getSpecies().equals(species.toUpperCase()) && list.get(i).getSize().equals(size.toUpperCase()) && list.get(i).isPotentDangerous() == dangerous){
 
-                pd.add(list.get(i).getId());
-            }
-        }
-        return pd;
-    }
+            //    pd.add(list.get(i).getId());
+            //}
+        //}
+        //return pd;
+ //   }
 
 }
 
